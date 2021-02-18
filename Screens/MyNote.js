@@ -155,26 +155,7 @@ function Mynote({navigation}) {
                         />
 
                     </View>
-                    <TouchableOpacity>            
-   {/* <Switch
-        // trackColor={{ false: "#767577", true: "#81b0ff" }}
-        // thumbColor={isEnabled ? "white" : "#006ade"}
-        // ios_backgroundColor="#006ade"
-        activeText={'activate'}
-inActiveText={'deactivate'}
-backgroundActive={'#006ade'}
-backgroundInactive={'#006ade'}
-circleSize={20}
-    barHeight={36}
-    circleBorderWidth={0}
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-        switchWidthMultiplier={2} // multipled by the `circleSize` prop to calculate total width of the Switch
-    switchBorderRadius={30}
-        innerCircleStyle={{ alignItems: "center", justifyContent: "center" }}
-        style={styles.Switch2}
-      />
-      </TouchableOpacity>  */}
+                  
                     <View>
                     </View>
 </View>
@@ -248,18 +229,20 @@ circleSize={20}
         // trackColor={{ false: "#767577", true: "#81b0ff" }}
         // thumbColor={isEnabled ? "white" : "#006ade"}
         // ios_backgroundColor="#006ade"
-        activeText={'on'}
-inActiveText={'off'}
-backgroundActive={'#006ade'}
-backgroundInactive={'#006ade'}
-circleSize={20}
-    barHeight={66}
+        activeText={'activate'}
+inActiveText={'deactivate'}
+backgroundActive={'transparent'}
+backgroundInactive={'transparent'}
+circleSize={15}
+    barHeight={36}
+    barWidth={106}
     circleBorderWidth={0}
+    style={{ transform: [{ scaleX: 3 }, { scaleY: 3 }] ,width:60,fontSize:12}}
         onValueChange={toggleSwitch}
         value={isEnabled}
-        switchWidthMultiplier={2} // multipled by the `circleSize` prop to calculate total width of the Switch
+        switchWidthMultiplier={8} // multipled by the `circleSize` prop to calculate total width of the Switch
     switchBorderRadius={30}
-        innerCircleStyle={{ alignItems: "center", justifyContent: "center" }}
+        innerCircleStyle={{ alignItems: "center", justifyContent: "center", marginLeft:0, marginRight:0}}
         style={styles.Switch2}
       />
       </TouchableOpacity> 
@@ -435,7 +418,7 @@ notiText:{
     color:"black",
     padding:7, 
     paddingLeft:15,
-    marginRight:90,
+    marginRight:78,
    
  },
  notification:{
@@ -444,13 +427,12 @@ notiText:{
  },
 Switch:{
     borderRadius:30,
-    width:80,
+    width:100,
     height:36,
-   
    
 },
 Switch2:{
-   
+    fontSize:12,
     width:190,
     height:56,
    
