@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 184" width="170" height="184">
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="42.629" y1="18.69" x2="115.502" y2="111.665">
+			<stop offset="0" stop-color="#0dd9fa"  />
+			<stop offset="1" stop-color="#006ade"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.txt0 { font-size: 17px;line-height: 17px;fill: #ffffff;font-weight: 900;font-family: "Lato-Black", "Lato" } 
+		.shp1 { fill: url(#grd1) } 
+		.shp2 { fill: #ffffff } 
+	</style>
+	<g id="Getwork – 11">
+		<g id="Group 248">
+			<g id="Group 246">
+				<g id="Group 245">
+					<text id="GETWORK" style="transform: matrix(2,0,0,2,0.158,181.307)" >
+						<tspan x="0" y="0" class="txt0">GETWORK</tspan>
+					</text>
+					<path id="Rectangle 14" class="shp1" d="M63.76 0.73L107.87 0.73C134.42 0.73 155.87 22.19 155.87 48.73L155.87 92.85C155.87 119.39 134.42 140.85 107.87 140.85L63.76 140.85C37.22 140.85 15.76 119.39 15.76 92.85L15.76 48.73C15.76 22.19 37.22 0.73 63.76 0.73Z" />
+					<path id="Path 20" fill-rule="evenodd" class="shp2" d="M36.8 38.64L76.46 107.24L84.04 92.85L79.71 85.26L76.42 90.48L46.29 38.64L36.8 38.64ZM134.83 38.64L125.35 38.64L95.17 90.42L90.8 82.92L107.91 53.34C99.53 53.34 91.17 53.34 82.79 53.34L86.64 60.01L94.48 60.08L85.97 74.62L69.55 46.45L111.91 46.41L116.4 38.64C96.11 38.64 75.81 38.64 55.52 38.64L95.18 107.24L134.83 38.64Z" />
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
