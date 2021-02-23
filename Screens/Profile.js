@@ -1,11 +1,12 @@
 import React,{useState,useEffect} from 'react'
-import { ImageBackground, StyleSheet, Text, View, Image,Dimensions } from 'react-native'
+import {  StyleSheet, Text, View, Image,Dimensions } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {globalStyle} from '../Styles/global';
 import * as ImagePicker from 'expo-image-picker';
-import Constants from 'expo-constants';
-import { Inter_200ExtraLight } from '@expo-google-fonts/inter';
+
+
+
 function Profile({ navigation }) {
     const [image, setImage] = useState(null);
 
@@ -26,12 +27,64 @@ function Profile({ navigation }) {
       allowsEditing: true,
       aspect: [4, 3],
       quality: 1,
-    });
-
+     
+    })
+    // .then( (dataPic) => {
+    //     console.log("datapic",dataPic)
+    //    navigation.navigate("MyProfile", {dataPic: dataPic})
+    //   })
+   
     console.log(result);
 
     if (!result.cancelled) {
       setImage(result.uri);
+      
+    } 
+  };
+  const renderFileData=()=> {
+    if (image != null) {
+      return <Image source={{ uri: image }}
+       style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        shadowColor: "#000",
+        
+       
+                        borderColor:"white",
+                        borderWidth:2,
+                     width:154,
+                     height:154,
+                     borderRadius:100,
+                    
+                    }}
+      />
+    } else {
+      return <Image source={require('../assets/camera.png')}
+        style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        shadowColor: 'black',
+                        shadowRadius: 10,
+                        shadowOpacity: 1,
+                     width:194,
+                     height:194,
+                     borderRadius:100,
+                    
+                    }}
+      />
+ 
+    }
+  };
+  const renderProfileData=()=> {
+    if (image != null) {
+      return <Image source={{ uri: image }}
+     style={globalStyle. profileLogo}
+      />
+    } else {
+      return <Image source={require('../assets/profile.png')}
+       style={globalStyle. profileLogo}
+      />
+ 
     }
   };
     return (
@@ -48,6 +101,7 @@ function Profile({ navigation }) {
                     </View>
 
                     <View style={styles.div}  >
+                 
                         <Image style={globalStyle.wLogo} source={require('../assets/W.png')} />
                         <Text style={globalStyle.logoDiv}>
                             <Text style={globalStyle.get}>GET</Text><Text style={globalStyle.work}>WORK</Text>
@@ -55,40 +109,28 @@ function Profile({ navigation }) {
                     </View>
                     <View style={styles.headdiv}  >
                         <TouchableOpacity  >
-                            <Image style={globalStyle. profileLogo} source={require('../assets/profile.png')} />
+                        {/*  */}
+                            {/* <Image style={globalStyle. profileLogo} source={require('../assets/profile.png')} /> */}
+                            {renderProfileData()}
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.foot}>
-                <TouchableOpacity onPress={pickImage}>
-                    <Image style={{
-                        justifyContent: "center",
-                        alignItems: "center",
-                        shadowColor: 'black',
-                        shadowRadius: 10,
-                        shadowOpacity: 1,
-                     width:194,
-                     height:194,
-                     borderRadius:100,
-                    
-                    }} source={require('../assets/camera.png') || { uri: image }} />
-                    
-                   </TouchableOpacity>
-                    
+                {renderFileData()}
+                <View>
+                <View style={{position:"absolute",top:-70,left:25,}}>
+                  <TouchableOpacity onPress={pickImage}>  
+                  <View  >
+         <Image  source={require('../assets/picker.png')} style={{width:50,height:50}}/>
+         </View></TouchableOpacity>
+         </View> 
+         </View>
                   
-      {/* <Image style={{
-          
-                        justifyContent: "center",
-                        alignItems: "center",
-                        shadowColor: 'black',
-                        shadowRadius: 10,
-                        shadowOpacity: 1,
-                        position:"absolute",
-                        top:0,
-                        left:0
-                       
-                    }}  onPress={pickImage} source={require('../assets/pick.png')} /> */}
-                   
+         {/* <View  >
+         <Image onPress={pickImage} source={require('../assets/picker.png')} style={{position:"absolute",top:-70,left:25, zIndex: 1,width:50,height:50}}/>
+         </View> */}
+        
+        
                 </View>
             </LinearGradient>
 
@@ -158,7 +200,6 @@ var styles = StyleSheet.create({
         marginTop: 40,
         width: "65%",
         height: 40,
-
         alignItems: "center",
     },
     headdiv: {
@@ -167,25 +208,7 @@ var styles = StyleSheet.create({
         height: 20,
         alignItems: "center",
     },
-    get: {
-        color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 14,
-        letterSpacing: .8,
-        textDecorationStyle: "solid",
-        fontWeight:"bold",
-        marginBottom: 20,
-        lineHeight: 18,
-    },
-    work: {
-        color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 14,
-        letterSpacing:.8,
-        marginBottom: 20,
-        fontWeight:"100",
-        lineHeight: 18,
-    },
+   
    im2: {
         marginTop: 15,
         width: 12,
@@ -229,7 +252,7 @@ var styles = StyleSheet.create({
         color: "#fff",
         padding: 10,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
     },

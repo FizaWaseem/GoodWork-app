@@ -1,23 +1,14 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useRef, useState } from 'react';
-import { ImageBackground } from 'react-native';
+import { ImageBackground, Pressable } from 'react-native';
 import {globalStyle} from '../Styles/global';
 import { StyleSheet, Text, View, Image,Dimensions,Alert, Modal, } from 'react-native';
-import { ScrollView, TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
+import {  TouchableOpacity } from 'react-native-gesture-handler';
 import { Icon } from 'react-native-elements';
-// import Modal from '../component/Bill';
+
 
 function Detail() {
   const [modalVisible, setModalVisible] = useState(false);
-
-//    const getModal =() => {
-//     setshowModal({ showModal: 1 });
-//   };
-
-//  const hideModal = () => {
-//     setshowModal({ showModal: 0 });
-//   };
-
     return (
       
         <ImageBackground style={globalStyle.container} source={require("../assets/b.png")}>
@@ -34,9 +25,9 @@ function Detail() {
                     </TouchableOpacity>
                 </View>
 
-                <View style={globalStyle.div}  >
-                        <Image style={globalStyle.Image} source={require('../assets/W.png')} />
-                        <Text style={globalStyle.logo}>
+                <View style={globalStyle.Getworkdiv}  >
+                        <Image style={globalStyle.WImage} source={require('../assets/W.png')} />
+                        <Text style={globalStyle.Wlogo}>
                             <Text style={globalStyle.get}>GET</Text><Text style={globalStyle.work}>WORK</Text>
                         </Text>
                     </View>
@@ -91,46 +82,37 @@ function Detail() {
 
         </View>
 
-        <Modal
-        animationType="fade"
+      <Modal
+        animationType="slide"
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-        }}>
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
         <View style={style.centeredView}>
           <View style={style.modalView}>
-          <Image source={require("../assets/warning.png")}/>
+          <Image source={require("../assets/warning.png")} style={{marginBottom:5}}/>
             <Text style={style.modalText}>
 “Warning! by clicking on the “I understand“
 button and you do not come to work you will
 be blocked form the application
 </Text>
-
-           <View style={{marginBottom:30,flexDirection:"row",}}>
-        <View style={style.suitMe}>
-        <TouchableOpacity
-       
-        onPress={() => {
-         setModalVisible(!modalVisible);
-        }}>
-        
-        <Text style={style.bodyText1}>It suits me</Text>
-    
-     </TouchableOpacity>
-     </View>
-     <View style={style.doesntSuit}>
-     <TouchableOpacity
-       
-        onPress={() => {
-         setModalVisible(!modalVisible);
-        }}>
-        <Text style={style.bodyText1}>It doesn't suits me</Text>
-       </TouchableOpacity>
-        </View>
-        
-        </View>
-        
+            <View style={{marginBottom:30,flexDirection:"row",}}>
+            <Pressable
+              style={[style.suitMe, style.bodyText1]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={style.textStyle}>It suits me</Text>
+            </Pressable>
+            <Pressable
+              style={[style.doesntSuit, style.bodyText1]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={style.textStyle}>It doesn't suits me</Text>
+            </Pressable>
+          </View>
           </View>
         </View>
       </Modal>
@@ -138,21 +120,16 @@ be blocked form the application
         <View style={{flexDirection:"row",flex:1,justifyContent:"center",alignItems:"flex-end",}} >
 <View style={{marginBottom:30,flexDirection:"row",}}>
         <View style={style.suitMe}>
-        <TouchableOpacity
-        onPress={() => {
-          setModalVisible(true);
-        }}>
+        <Pressable
+      onPress={() => setModalVisible(true)} >
         
         <Text style={style.bodyText1}>It suits me</Text>
     
-     </TouchableOpacity>
+        </Pressable>
      </View>
      <View style={style.doesntSuit}>
      <TouchableOpacity
-       
-        onPress={() => {
-          setModalVisible(true);
-        }}>
+       onPress={() => setModalVisible(true)}  >
         <Text style={style.bodyText1}>It doesn't suits me</Text>
        </TouchableOpacity>
         </View>
@@ -193,41 +170,26 @@ height: 20,
     text:{
 textAlign:"left",
   color: "black",
-  fontFamily: "Ebrima",
-  fontSize: 17,
-  // letterSpacing: .8,
+  fontFamily: "ebrima-normal",
+  fontSize: 15,
   paddingTop:15,
-  textDecorationStyle: "solid",
-  // fontWeight:600,
   marginBottom: 20,
-  // lineHeight: 22,
 
     },
     text1:{
       textAlign:"left",
         color: "black",
-        fontFamily: "Ebrima",
-        fontSize: 17,
-        letterSpacing: .8,
+        fontFamily:"ebrima-normal",
+        fontSize: 16,
         paddingTop:10,
-        textDecorationStyle: "solid",
-        // fontWeight:600,
-        // marginBottom: 20,
-        // lineHeight: 22,
-      
           },
     text2:{
       textAlign:"left",
         color: "black",
-        fontFamily: "Ebrima",
+        fontFamily:"ebrima-normal",
         fontSize: 12,
-        letterSpacing: .8,
         marginTop:0,
-        textDecorationStyle: "solid",
-        fontWeight: 'bold',
         marginBottom: 0,
-        // lineHeight: 22,
-      
           },
     gridItem: {
         margin: 5,
@@ -265,12 +227,11 @@ borderBottomLeftRadius: 0,
 borderBottomRightRadius: 50,
     },
   bodyText1:{
-      fontSize:16,
+      fontSize:14,
       color:"white",
-      fontWeight: 'bold',
-      fontFamily: "Ebrima",
+     fontFamily:"Lato-Bold",
       textAlign:'center',
-      padding:7,
+      padding:11,
   },
   //  ===========Modal================
   centeredView: {
@@ -300,8 +261,7 @@ borderBottomRightRadius: 50,
   openButton: {
     fontSize:16,
       color:"white",
-      fontWeight: 'bold',
-      fontFamily: "Ebrima",
+      fontFamily: "Lato-Bold",
       textAlign:'center',
       padding:7,
   },
@@ -314,4 +274,6 @@ borderBottomRightRadius: 50,
     marginBottom: 15,
     textAlign: 'center',
   },
+
+
 });

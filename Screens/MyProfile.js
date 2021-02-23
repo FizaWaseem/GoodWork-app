@@ -1,9 +1,7 @@
 import React,{useState} from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View, Image ,Dimensions,TextInput,ImageBackground} from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import * as Animatable from 'react-native-animatable';
-import NavigationList from '../component/NavigationList';
+import {  TouchableOpacity } from 'react-native-gesture-handler';
 import { Icon } from 'react-native-elements';
 
 function Myprofile({navigation}) {
@@ -18,6 +16,9 @@ function Myprofile({navigation}) {
         const value = e.target.value;
         setdata({ ...data, [name]: value }) //dyamic 
     }
+   
+
+    // console.log(dataPic);
     return (
         // <View style={styles.container}>
          <ImageBackground style={styles.container} source={require("../assets/b.png")}>
@@ -54,13 +55,12 @@ function Myprofile({navigation}) {
      
         <View style={styles.footer}>
 
-        {/* <View style={{flex:1}}></View> */}
+        {/* <View style={{flex:1}}></View> ) */}
 <View style={{flex:1}}>
 <View style={styles.person}>
 <Image source={require("../assets/person.png")} style={{width: 94,
     height: 94,}}/>
 <View style={{flex:1,marginTop:10,marginLeft:0}}>
-
         <Text style={styles.text}>Username</Text>
         </View>
         </View>
@@ -151,10 +151,7 @@ var styles = StyleSheet.create({
     },
 person:{
     marginTop:5,
-//  position: "absolute",
- 
-//  top: -37,
-//  left: -50,
+
     }
 ,
 values:{
@@ -189,16 +186,14 @@ valueText:{
         justifyContent: 'center',
     },
     logo: {
-        // position: "absolute",
-        // left: 0,
-        // top: 0,
+       
         color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 18,
+        fontFamily: "Lato-Bold",
+        fontSize: 16,
+        paddingTop:7,
         lineHeight: 28,
         letterSpacing: .8,
         textDecorationStyle: "solid",
-        // fontWeight:600,
         marginBottom: 20,
         
     },   
@@ -206,7 +201,7 @@ valueText:{
         color: "black",
         padding: 0,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
 
@@ -229,7 +224,7 @@ valueText:{
         color: "#fff",
         padding: 7,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 16,
 
 
@@ -252,7 +247,7 @@ valueText:{
     },
     labelStyle: {
         color: "#aeb0b3",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 14,
         opacity: 1,
 

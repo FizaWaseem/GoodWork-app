@@ -3,21 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Image ,Dimensions} from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import {globalStyle} from '../Styles/global';
-
+import {ProList} from '../component/Array/ArrayList'
 function Professional({ navigation }) {
-    const data = [
-        { id: '1', name: "Electrician" },
-        { id: '2', name: "Skip Hire" },
-        { id: '3', name: "Gypsum man" },
-        { id: '4', name: "Painter" },
-        { id: '5', name: "Welder" },
-        { id: '6', name: "Spatula" },
-        { id: '7', name: "Constructor" },
-        { id: '8', name: "Sequence" },
-
-
-
-    ];
+    
     return (
         <View style={styles.container}>
             <LinearGradient colors={['#0dd9fa', '#006ade']}
@@ -25,13 +13,15 @@ function Professional({ navigation }) {
                 style={styles.header} >
                 <View style={styles.head} >
 
+               
                 <View style={globalStyle.headdiv}  >
-                        <TouchableOpacity   onPress={() => navigation.goBack()} >
+                <TouchableOpacity   onPress={() => navigation.goBack()} style={{marginLeft:20,width:30}} >
                             <Image style={globalStyle.chevIcon} source={require('../assets/chev.png')} />
-                        </TouchableOpacity>
+                            </TouchableOpacity>
                     </View>
+                  
 
-                    <View style={styles.div}  >
+                    <View style={globalStyle.div}  >
                         <Image style={globalStyle.wLogo} source={require('../assets/W.png')} />
                         <Text style={globalStyle.logoDiv}>
                             <Text style={globalStyle.get}>GET</Text><Text style={globalStyle.work}>WORK</Text>
@@ -62,10 +52,10 @@ function Professional({ navigation }) {
                 <View style={{ flex: 6 }}>
                     <ScrollView style={{ flex: 1 }}>
                     
-                        {data.map(items => {
+                        {ProList.map(items => {
                             return (
                                 <View style={styles.type} key={items.id}>
-                                <TouchableOpacity onPress={() => navigation.navigate('Selection')} >
+                                <TouchableOpacity onPress={() => navigation.navigate('Selection',{id:items.id})} >
                                     <Text style={styles.typeText}>{items.name}</Text>
                                     </TouchableOpacity>
                                 </View>
@@ -161,16 +151,9 @@ var styles = StyleSheet.create({
     tn: {
         marginTop: 20,
         marginBottom: 5,
-
-        // borderRadius: 25,
-        // height: 35,
-        // width:200,
         width: 174,
         height: 31,
         borderRadius: 15,
-
-        // paddingLeft:15,
-        // paddingRight:15,
         paddingTop: 5,
         paddingBottom: 5,
         shadowColor: "#000",
@@ -186,9 +169,9 @@ var styles = StyleSheet.create({
     },
     btntext: {
         color: "#fff",
-        padding: 0,
+        padding: 3,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         fontSize: 14,
 
     },
@@ -198,9 +181,6 @@ var styles = StyleSheet.create({
         borderTopRightRadius: 30,
         borderBottomLeftRadius: 0,
         borderBottomRightRadius: 30,
-        // width: "100%",
-        // height: 45,
-
         width: 278,
         height: 39,
 
@@ -210,7 +190,7 @@ var styles = StyleSheet.create({
         color: "#fff",
         padding: 7,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
 
@@ -218,8 +198,6 @@ var styles = StyleSheet.create({
     type: {
         backgroundColor: "#BFDAF2",
         borderRadius: 20,
-        // width:"100%",
-        // height:47,
         width: 278,
         height: 39,
         marginBottom: 10,
@@ -228,6 +206,7 @@ var styles = StyleSheet.create({
     typeText: {
         fontSize: 18,
         padding: 5,
+        fontFamily:"ebrima-normal",
         color: "black",
         textAlign: "center"
     }

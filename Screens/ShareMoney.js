@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Image ,Dimensions} from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import {globalStyle} from '../Styles/global';
 import * as Animatable from 'react-native-animatable';
-import NavigationList from '../component/NavigationList';
 import { Icon } from 'react-native-elements';
 
 function ShareMoney({navigation}) {
@@ -24,8 +23,8 @@ function ShareMoney({navigation}) {
                 </View>
 
                 <View style={globalStyle.div}  >
-                        <Image style={globalStyle.Image} source={require('../assets/W.png')} />
-                        <Text style={globalStyle.logo}>
+                        <Image style={globalStyle.wLogo} source={require('../assets/W.png')} />
+                        <Text style={globalStyle.logoDiv}>
                             <Text style={globalStyle.get}>GET</Text><Text style={globalStyle.work}>WORK</Text>
                         </Text>
                     </View>
@@ -124,7 +123,7 @@ borderBottomRightRadius: 0,
    earnText:{
         fontSize:18,
         color:"white",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         textAlign:'center',
         padding:15,
     },
@@ -193,14 +192,14 @@ alignItems:"center"
     bodyText:{
         fontSize:18,
         color:"white",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         textAlign:'center',
-        padding:5,
+        padding:7,
     },
     bodyText1:{
         fontSize:14,
         color:"white",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         textAlign:'center',
         padding:7,
     }

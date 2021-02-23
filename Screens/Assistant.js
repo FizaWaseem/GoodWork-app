@@ -3,14 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Image,Dimensions } from 'react-native';
 import {globalStyle} from '../Styles/global';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { Arraydata } from '../component/Array/ArrayList';
 function Assistant({navigation}) {
-    const Arraydata=[
-{id:'1',name:"General Assistant"},
-{id:'2',name:"Plumber Assistant"},
-{id:'3',name:" Gypsum assistant"},
-{id:'4',name:"Painter Assistant"},
-{id:'5',name:"Spatula Assistant"},
-    ];
+    
     return (
         <View style={styles.container}>
             <LinearGradient colors={['#0dd9fa', '#006ade']}
@@ -24,7 +19,7 @@ function Assistant({navigation}) {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.div}  >
+                    <View style={globalStyle.div}  >
                         <Image style={globalStyle.wLogo} source={require('../assets/W.png')} />
                         <Text style={globalStyle.logoDiv}>
                             <Text style={globalStyle.get}>GET</Text><Text style={globalStyle.work}>WORK</Text>
@@ -103,8 +98,6 @@ var styles = StyleSheet.create({
         marginBottom: 5,
         width: "100%",
         flexDirection: "row",
-
-
     },
 
     footer: {
@@ -177,9 +170,9 @@ var styles = StyleSheet.create({
     },
     btntext: {
         color: "#fff",
-        padding: 0,
+        padding: 3,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         fontSize: 14,
 
     },
@@ -201,7 +194,7 @@ var styles = StyleSheet.create({
         color: "#fff",
         padding: 7,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
 
@@ -220,6 +213,7 @@ var styles = StyleSheet.create({
         fontSize: 18,
         padding: 5,
         color: "black",
+        fontFamily: "ebrima-normal",
         textAlign: "center"
     }
 });

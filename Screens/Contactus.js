@@ -91,15 +91,10 @@ var styles = StyleSheet.create({
 
   
     title: {
-        // position: "absolute",
-        // left: 0,
-        // top: 0,
         color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 18,
-        letterSpacing: .8,
-        textDecorationStyle: "solid",
-        // fontWeight:600,
+        fontFamily: "Lato-Bold",
+        fontSize: 15,
+        letterSpacing: .2,
         marginBottom: 20,
         lineHeight: 28,
     },

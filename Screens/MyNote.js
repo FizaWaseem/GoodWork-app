@@ -1,9 +1,7 @@
 import React,{useState,useRef} from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View, Image ,Dimensions,TextInput,ImageBackground} from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import * as Animatable from 'react-native-animatable';
-import NavigationList from '../component/NavigationList';
+import {  TouchableOpacity } from 'react-native-gesture-handler';
 import { Icon } from 'react-native-elements';
 import RBSheet from "react-native-raw-bottom-sheet";
 import { Switch } from 'react-native-switch';
@@ -121,9 +119,7 @@ function Mynote({navigation}) {
                             name='Phone Number'
                             value={data.phoneNumber}
                             onChangeText={handleInput}
-                        // errorStyle={{ color: 'red' }}
-                        // errorMessage={this.state.errorfName != "" ? this.state.errorfName:""}
-
+                      
                         />
 
                     </View>
@@ -323,11 +319,8 @@ var styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo: {
-        // position: "absolute",
-        // left: 0,
-        // top: 0,
         color: "black",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         fontSize: 18,
         lineHeight: 28,
         letterSpacing: .8,
@@ -355,7 +348,7 @@ var styles = StyleSheet.create({
     },
     labelStyle: {
         color: "#aeb0b3",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 14,
         opacity: 1,
 
@@ -384,15 +377,14 @@ profileImage: {
 user: {
     color: "#fff",
     textAlign: "left",
-    fontFamily: "Ebrima",
+    fontFamily: "Lat-Bold",
     marginLeft:10,
     fontSize: 18,
-    fontWeight:'bold'
+  
 },
 values:{
     width: 280,
 height: 36,
-// filter: dropshadow(0px 3px 3.5px rgba(0,0,0,0.4));
 backgroundColor: "white",
 borderRadius: 30,
 marginTop:10,
@@ -407,18 +399,20 @@ elevation: 4,
 },
 valueText:{
    textAlign:"left",
-   fontSize:16,
+   fontSize:15,
+   fontFamily:"ebrima-normal",
    color:"black",
    padding:7, 
    paddingLeft:15,
 },
 notiText:{
     textAlign:"left",
-    fontSize:16,
+    fontSize:15,
+    fontFamily:"ebrima-normal",
     color:"black",
     padding:7, 
     paddingLeft:15,
-    marginRight:78,
+    marginRight:77,
    
  },
  notification:{

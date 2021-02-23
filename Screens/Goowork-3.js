@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { ImageBackground,StyleSheet, Text, View ,Image} from 'react-native';
 import * as Animatable from 'react-native-animatable';
+
 const Intro = ({ navigation }) => {
     return (
     <ImageBackground source={require('../assets/background.png')}  style={styles.image1}>
@@ -9,14 +11,16 @@ const Intro = ({ navigation }) => {
      <Image  source={require('../assets/log1.png')}  style={styles.Image}/>
      </View>
      </View>
-     <View style={styles.comment}>
+     <Animatable.View animation="slideInLeft" style={styles.comment}>
      <View animation="fadeInUp" style={styles.div}>  
-      <Text style={styles.text} onPress={() => navigation.navigate('Login')}>I am a Contractor,Looking for a workers</Text>
+      <Text style={[styles.text,{textAlign:"left"}]} onPress={() => navigation.navigate('Login')}>
+       I am a contractor,</Text>
+       <Text style={styles.text}>looking for a workers</Text>
      </View>
      <View animation="fadeInUp" delay="2" style={styles.div2}>  
-      <Text style={styles.text} onPress={() => navigation.navigate('Profile')}>Looking for a job</Text>
+      <Text style={styles.text} onPress={() => navigation.navigate('Login')}>Looking for a job </Text>
      </View>
-     </View>
+     </Animatable.View>
      
      
        </ImageBackground>
@@ -38,8 +42,6 @@ const styles = StyleSheet.create({
     },
       profileImage:{
        flex:1,
-       
-        // flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',  
     },
@@ -91,11 +93,11 @@ flex:4,
     },
     text:{
       fontSize: 18 ,
-     
-      letterSpacing: .8,
+      letterSpacing: .4,
       lineHeight: 28,
       color: "#1a1818",
-      fontFamily: "Ebrima",
+      fontWeight:"500",
+      fontFamily: "ebrima-normal",
     },
 
     

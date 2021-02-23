@@ -39,10 +39,6 @@ const ForgetPassword = ({navigation}) => {
                             labelStyle={styles.labelStyle}
                             placeholder="Email"
                             name='Email'
-                            // value={data.phoneNumber}
-                            // onChangeText={handleInput}
-                        // errorStyle={{ color: 'red' }}
-                        // errorMessage={this.state.errorfName != "" ? this.state.errorfName:""}
 
                         />
 
@@ -55,16 +51,7 @@ const ForgetPassword = ({navigation}) => {
                             labelStyle={styles.labelStyle}
                             placeholder="Password"
                             name='password'
-                            // value={data.password}
-                            // onChangeText={handleInput}
-                        // secureTextEntry={showPassword}
-                        // errorStyle={{ color: 'red' }}
-                        // errorMessage={errorPassword != "" ?  errorPassword :""}
-                        // rightIcon={
-                        //     <TouchableOpacity onPress={() => this.setState({showPassword:!showPassword})} >
-                        //         <Image source={require('../assets/eye.png')} style={{ height: 13, width: 26 }} />
-                        //     </TouchableOpacity>}
-
+                        secureTextEntry={true}
                         />
                     </View>
                    
@@ -118,17 +105,15 @@ var styles = StyleSheet.create({
 
     }, get: {
         color: "black",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         fontSize: 16,
         letterSpacing: .8,
-        textDecorationStyle: "solid",
-        // fontWeight:600,
         marginBottom: 20,
         lineHeight: 20,
     },
     work: {
         color: "black",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Light",
         fontSize: 16,
         marginBottom: 20,
         lineHeight: 20,
@@ -136,25 +121,25 @@ var styles = StyleSheet.create({
     title: {
         marginTop: 20,
         color: "black",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 29,
     },
     Logintitle: {
         color: "black",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         lineHeight: 49,
         fontSize: 40,
     },
     labelStyle: {
         color: "#aeb0b3",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 14,
         opacity: 1,
 
     },
     fp: {
         color: "#aeb0b3",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 12,
         opacity: 1,
 
@@ -200,7 +185,7 @@ var styles = StyleSheet.create({
         color: "#fff",
         padding: 10,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
     },

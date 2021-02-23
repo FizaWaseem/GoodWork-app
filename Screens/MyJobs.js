@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { StyleSheet, Text, View, Image, Dimensions,ImageBackground, Keyboard, } from 'react-native';
-import { ScrollView, TextInput, TouchableOpacity, TouchableWithoutFeedback, } from 'react-native-gesture-handler';
+import { StyleSheet, Text, View, Dimensions,ImageBackground, Keyboard, } from 'react-native';
+import {  TextInput, TouchableOpacity, TouchableWithoutFeedback, } from 'react-native-gesture-handler';
 import { Icon } from 'react-native-elements';
 import { globalStyle } from '../Styles/global';
 
@@ -156,7 +156,7 @@ var styles = StyleSheet.create({
     },
     Selected2: {
         width: 120,
-        height: 45,
+        height: 40,
         borderTopLeftRadius: 0,
         borderTopRightRadius: 50,
         borderBottomLeftRadius: 0,
@@ -164,7 +164,7 @@ var styles = StyleSheet.create({
     },
     Selected1: {
         width: 120,
-        height: 45,
+        height: 40,
         borderTopLeftRadius: 50,
         borderTopRightRadius: 0,
         borderBottomLeftRadius: 50,
@@ -174,7 +174,7 @@ var styles = StyleSheet.create({
     btnSelected: {
         backgroundColor: "#c7c9cb",
         width: 120,
-        height: 45,
+        height: 40,
         borderTopLeftRadius: 50,
         borderTopRightRadius: 0,
         borderBottomLeftRadius: 50,
@@ -182,12 +182,11 @@ var styles = StyleSheet.create({
         marginTop: 0,
     },
     btntext:{
-        paddingTop:10,
+        paddingTop:14,
         padding:15,
-fontSize:14,
-fontWeight:'bold',
+fontSize:12,
 color: "white",
-fontFamily: "Ebrima",
+fontFamily: "Lato-Bold",
     },
 
     footer: {
@@ -224,6 +223,7 @@ fontFamily: "Ebrima",
         color: "rgb(0,0,0)",
         width: 289,
         height: 30,
+        fontFamily:"ebrima-normal",
         // marginVertical: 5,
         marginHorizontal: 5,
         paddingLeft: 5,
@@ -234,6 +234,7 @@ fontFamily: "Ebrima",
         // marginTop: 20,
         paddingBottom: 5,
         // paddingTop: ,
+        fontFamily:"ebrima-normal",
         backgroundColor: "white",
         borderBottomWidth: 2,
         borderBottomColor: "#aeb0b3",

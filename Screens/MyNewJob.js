@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View, Image, Dimensions,ImageBackground, Keyboard, } from 'react-native';
 import { ScrollView, TextInput, TouchableOpacity, TouchableWithoutFeedback} from 'react-native-gesture-handler';
-import * as Animatable from 'react-native-animatable';
 import { Icon } from 'react-native-elements';
 import {globalStyle} from '../Styles/global';
 
@@ -155,7 +154,7 @@ var styles = StyleSheet.create({
     },
     Selected2:{
         width: 120,
-        height: 45,
+        height: 40,
         borderTopLeftRadius: 0,
         borderTopRightRadius: 50,
         borderBottomLeftRadius: 0,
@@ -163,7 +162,7 @@ var styles = StyleSheet.create({
     },
 Selected1:{
     width: 120,
-    height: 45,
+    height: 40,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 0,
     borderBottomLeftRadius: 50,
@@ -172,7 +171,7 @@ Selected1:{
     btnSelected: {
         backgroundColor: "#c7c9cb",
         width: 120,
-        height: 45,
+        height: 40,
         borderTopLeftRadius: 0,
         borderTopRightRadius: 50,
         borderBottomLeftRadius: 0,
@@ -180,12 +179,11 @@ Selected1:{
         marginTop: 0,
     },
     btntext:{
-        paddingTop:10,
+        paddingTop:14,
         padding:15,
-fontSize:14,
-fontWeight:'bold',
-color: "white",
-fontFamily: "Ebrima",
+        fontSize:12,
+        color: "white",
+        fontFamily: "Lato-Bold",
     },
     footer: {
         flex: 2,

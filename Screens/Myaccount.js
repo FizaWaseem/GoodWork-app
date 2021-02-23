@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet, Text, View, Image, Dimensions, TextInput, ImageBackground } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import * as Animatable from 'react-native-animatable';
-import NavigationList from '../component/NavigationList';
+import {  TouchableOpacity } from 'react-native-gesture-handler';
 import { Icon } from 'react-native-elements';
-
+import {globalStyle} from '../Styles/global';
 function Myaccount({ navigation }) {
     const [data, setdata] = useState({
         phoneNumber: "",
@@ -35,7 +33,6 @@ function Myaccount({ navigation }) {
                     </View>
 
                     <View style={styles.div}  >
-
                         <Text style={styles.logo}>
                             My Account
                         </Text>
@@ -86,7 +83,7 @@ function Myaccount({ navigation }) {
                             start={{ x: .1, y: 0 }} end={{ x: .9, y: 1 }}
                             style={styles.earn} >
                             <TouchableOpacity onPress={() => navigation.navigate('share')} >
-                            <Text style={styles.earnText} >Withdrawal</Text>
+                            <Text style={styles.earnText} >Withdraw</Text>
                             </TouchableOpacity>
                         </LinearGradient>
                    
@@ -97,9 +94,9 @@ from 500 euro</Text></View>
                 <View style={{ flex: 1 }}>
                     <LinearGradient colors={['#0dd9fa', '#006ade']}
                         start={{ x: .1, y: 0 }} end={{ x: .9, y: 1 }}
-                        style={styles.btn} >
+                        style={globalStyle.btn} >
                         <TouchableOpacity onPress={() => navigation.navigate('Contactus')}>
-                            <Text style={styles.btntext}>
+                            <Text style={globalStyle.btntext}>
                                 Save
                             </Text>
                         </TouchableOpacity>
@@ -189,11 +186,6 @@ var styles = StyleSheet.create({
         marginTop: 5,
         width: "100%",
 
-
-        //  position: "absolute",
-
-        //  top: -37,
-        //  left: -50,
     }
     ,
     values: {
@@ -219,15 +211,12 @@ var styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo: {
-        // position: "absolute",
-        // left: 0,
-        // top: 0,
         color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 18,
+        fontFamily: "Lato-Bold",
+        fontSize: 16,
+        paddingTop:7,
         letterSpacing: .8,
         textDecorationStyle: "solid",
-        // fontWeight:600,
         marginBottom: 20,
         lineHeight: 28,
     },
@@ -235,7 +224,7 @@ var styles = StyleSheet.create({
         color: "black",
         padding: 0,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
 
@@ -246,32 +235,10 @@ var styles = StyleSheet.create({
         paddingLeft: 10,
         paddingRight: 10,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 16,
     },
-    btn: {
-        marginTop: 0,
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 30,
-        // width: "100%",
-        // height: 45,
 
-        width: 280,
-        height: 39,
-
-    },
-
-    btntext: {
-        color: "#fff",
-        padding: 7,
-        textAlign: "center",
-        fontFamily: "Ebrima",
-        fontSize: 16,
-
-
-    },
     chevron: {
         marginTop: 15,
         width: 12,
@@ -290,7 +257,7 @@ var styles = StyleSheet.create({
     },
     labelStyle: {
         color: "#aeb0b3",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 14,
         opacity: 1,
 
@@ -313,11 +280,11 @@ var styles = StyleSheet.create({
         borderBottomRightRadius: 0,
     },
     earnText: {
-        fontSize: 16,
+        fontSize: 14,
         color: "white",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         textAlign: 'center',
-        padding: 5,
+        padding: 8,
     },
 
 

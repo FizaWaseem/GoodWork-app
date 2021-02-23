@@ -42,14 +42,10 @@ marginTop:10,
 },
 text: {
     color: "white",
-    fontFamily: "Ebrima",
+    fontFamily: "Lato-Bold",
     textAlign:"center",
-    fontSize: 16,
-    letterSpacing: .8,
-    textDecorationStyle: "solid",
-    // fontWeight:600,
-    // marginBottom: 20,
-   padding:5,
+    fontSize: 14,
+   padding:9,
 },
 
 });

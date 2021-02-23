@@ -11,13 +11,13 @@ export const globalStyle = StyleSheet.create({
     },
     wLogo: {
         marginTop: 15,
-        marginRight: 40,
+        marginRight: 60,
         width: 22,
         height: 15,
 
     },  logoDiv: {
         position: "absolute",
-        left: 110,
+        left: 100,
         top: 15,
     },
     header: {
@@ -38,6 +38,25 @@ export const globalStyle = StyleSheet.create({
         width: "65%",
         height: 40,
         alignItems: "center",
+    },
+    
+    Getworkdiv: {
+        marginTop: 40,
+        width: "65%",
+        height: 40,
+        alignItems: "center",
+        
+    },
+    WImage: {
+        marginTop: 10,
+        marginRight: 65,
+        width: 27,
+        height: 20,
+    },
+    Wlogo: {
+        position: "absolute",
+        left: 100,
+        top: 12,
     },
     headdiv: {
         marginTop: 40,
@@ -67,27 +86,27 @@ export const globalStyle = StyleSheet.create({
     },
     get: {
         color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 14,
+        fontFamily: "Lato-Bold",
+        fontSize: 15,
         letterSpacing: .8,
         textDecorationStyle: "solid",
         fontWeight:'bold',
         marginBottom: 20,
-        lineHeight: 18,
+        lineHeight: 21,
     },
     work: {
         color: "white",
-        fontFamily: "Ebrima",
-        fontSize: 14,
+        fontFamily: "Lato-Light",
+        fontSize: 15,
         letterSpacing:.8,
         marginBottom: 20,
         fontWeight:"200",
-        lineHeight: 18,
+       
     },
     chevIcon: {
-        marginTop: 15,
+        marginTop: 10,
         width: 12,
-        height: 16,
+        height: 19,
         //    height:20,
         //     width: 20,
     },
@@ -95,6 +114,9 @@ export const globalStyle = StyleSheet.create({
         marginTop: 10,
         width: 30,
         height: 30,
+        borderWidth:1,
+        borderColor:"white",
+        borderRadius:100,
         // width: "45%",
     },
     chevron: {
@@ -126,7 +148,7 @@ export const globalStyle = StyleSheet.create({
         color: "#fff",
         padding: 7,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 16,
         fontWeight:'bold',
     },

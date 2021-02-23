@@ -1,7 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Image,Dimensions } from 'react-native';
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {globalStyle} from '../Styles/global';
 function PersonalInfo({navigation}) {
@@ -23,7 +23,7 @@ function PersonalInfo({navigation}) {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.div}  >
+                    <View style={globalStyle.div}  >
                         <Image style={globalStyle.wLogo} source={require('../assets/W.png')} />
                         <Text style={globalStyle.logoDiv}>
                             <Text style={globalStyle.get}>GET</Text><Text style={globalStyle.work}>WORK</Text>
@@ -197,7 +197,7 @@ var styles = StyleSheet.create({
     labelText:{
         color: "black",
         padding: 3,
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 16,
     },
     select: {
@@ -302,10 +302,9 @@ padding:7,
     },
     btntext: {
         color: "#fff",
-        padding: 0,
-        
+        padding: 3,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "Lato-Bold",
         fontSize: 14,
 
     },
@@ -326,7 +325,7 @@ padding:7,
         color: "#fff",
         padding: 5,
         textAlign: "center",
-        fontFamily: "Ebrima",
+        fontFamily: "ebrima-normal",
         fontSize: 18,
 
 
